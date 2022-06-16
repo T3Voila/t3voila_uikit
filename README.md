@@ -8,3 +8,5 @@
 This is a TYPO3 Extension which provides an TemplaVoilà! Plus theme using [UIkit](https://getuikit.com/) framework and TYPO3.Fluid templating engine.
 
 <img alt="ICON" width="256" height="256" src="/Documentation/Images/uikit-logo.svg">
+
+The included UIkit JavaScript and CSS files are released under [MIT License](https://github.com/uikit/uikit/blob/develop/LICENSE.md)
