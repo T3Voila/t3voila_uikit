@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <ul uk-tab>
+        <f:for each="{field_sections}" as="section">
+            <li class="">
+                <a class="" href="#">{section.field_section.field_name}</a>
+            </li>
+        </f:for>
+    </ul>
+    <ul class="uk-switcher uk-margin">
+        <f:for each="{field_sections}" as="section">
+            <li class="">
+                <f:format.raw>{section.field_section.field_content}</f:format.raw>
+            </li>
+        </f:for>
+    </ul>
+</f:section>
+
+</html>

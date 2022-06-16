@@ -1,0 +1,31 @@
+tvp-mapping:
+    meta:
+        name: UIkit Tab
+    combinedDataStructureIdentifier: 'T3Voila\Theme\UIkit\Content\DataStructure:MultiContent.tvp.xml'
+    combinedTemplateConfigurationIdentifier: 'T3Voila\Theme\UIkit\Content\Template:Tab.tvp.yaml'
+    combinedBackendLayoutConfigurationIdentifier: 'T3Voila\Theme\UIkit\BackendLayout:Tab.tvp.yaml'
+    mappingToTemplate:
+        field_sections:
+            dataType: flexform
+            dataPath: field_sections
+            valueProcessing: repeatable
+            container:
+                field_section:
+                    dataType: flexform
+                    dataPath: field_section
+                    valueProcessing: container
+                    container:
+                        field_name:
+                            title: 'LLL:EXT:t3voila_uikit/Resources/Private/Language/content.xliff:tab.field.name'
+                            dataType: flexform
+                            dataPath: field_name
+                        field_content:
+                            title: 'LLL:EXT:t3voila_uikit/Resources/Private/Language/content.xliff:tab.field.content'
+                            dataType: flexform
+                            dataPath: field_content
+                            valueProcessing: typoScript
+                            valueProcessing.typoScript: |
+                                10 = RECORDS
+                                10.source.current = 1
+                                10.tables = tt_content
+                                10.wrap = <!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end-->

@@ -1,0 +1,7 @@
+imports:
+    - { resource: ../PageBase.yaml }
+tvp-template:
+    meta:
+        name: Default UIkit Page
+        renderer: 'TVP\Renderer\Fluid'
+        template: 'EXT:t3voila_uikit/Resources/Private/Templates/Page/SingleColumn.html'

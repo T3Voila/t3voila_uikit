@@ -1,0 +1,20 @@
+tvp-template:
+    options:
+        layoutRootPaths:
+            - 'EXT:t3voila_uikit/Resources/Private/Layouts/Page'
+        partialRootPaths:
+            - 'EXT:t3voila_uikit/Resources/Private/Partials/Page'
+    header:
+        meta:
+            description:
+                content: UIkit
+            viewport:
+                content: device-width, initial-scale=1
+        css:
+            uikit:
+                href: EXT:t3voila_uikit/Resources/Public/Css/uikit.css
+                rel: stylesheet
+                media: all
+        javascript:
+            uikit:
+                src: EXT:t3voila_uikit/Resources/Public/Javascript/uikit.js

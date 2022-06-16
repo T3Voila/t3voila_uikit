@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="uk-container">
+    <nav class="uk-navbar-container uk-navbar" data-uk-navbar="" style="z-index: 980;" data-uk-sticky="animation: uk-animation-slide-top; cls-active: uk-sticky; cls-inactive: uk-navbar-container;">
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <f:for each="{topmenu}" as="menuentry">
+                    <li class="{f:if(condition: '{menuentry.active}', then: 'uk-active')}">
+                        <a href="{menuentry.link}" class="" aria-expanded="false">{menuentry.title}</a>
+                        <f:if condition="{menuentry.children}">
+                            <div class="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style="left: 0px; top: 90px;">
+                                <f:render section="level2" arguments="{menuentries: menuentry.children}" />
+                            </div>
+                        </f:if>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+    </nav>
+</div>
+</html>
+
+
+<f:section name="level2">
+    <ul class="uk-nav uk-navbar-dropdown-nav idz-dropdown-nopadding">
+        <f:for each="{menuentries}" as="menuentry">
+            <li class="{f:if(condition: '{menuentry.active}', then: 'uk-active')}">
+                <a href="{menuentry.link}" class="" aria-expanded="false">{menuentry.title}</a>
+            </li>
+        </f:for>
+    </ul>
+</f:section>

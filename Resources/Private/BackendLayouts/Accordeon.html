@@ -1,0 +1,25 @@
+<div class="panel-group" id="panel-{node.raw.table}-{node.raw.entity.uid}">
+    <f:for each="{childFlexformData.field_sections.el}" key="ident" as="section">
+        <div class="panel-group" id="panel-{node.raw.table}-{node.raw.entity.uid}-{ident}">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" id="panel-{ident}-heading">
+                        <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#panel-{ident}-body" aria-expanded="false" aria-controls="panel-{ident}-body">
+                            <span class="caret"></span>
+                            {section.field_section.el.field_name.vDEF}
+                        </a>
+                    </h3>
+                </div>
+                <div id="panel-{ident}-body" class="collapse" aria-labelledby="panel-{ident}-heading">
+                    <div class="panel-body">
+                        <div class="tvjs-dropzone" data-parent-pointer="{parentPointer}#field_sections#el#{ident}#field_section#el#field_content:vDEF" data-child-allowed="{fieldConfig.field_sections.el.field_section.el.field_content.TCEforms.config.allowed}">
+                            <f:for each="{childElements.field_sections.{ident}.field_section.field_content.vDEF}" as="element">
+                                <f:render partial="Backend/Handler/DoktypeDefaultHandler/Node" arguments="{node: element.node}" />
+                            </f:for>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:for>
+</div>

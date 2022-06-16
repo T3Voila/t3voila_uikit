@@ -1,0 +1,23 @@
+<div role="tabpanel">
+    <ul class="nav nav-tabs t3js-tabs" id="tab-{node.raw.table}-{node.raw.entity.uid}-header" role="tablist" data-store-last-tab="1">
+        <f:for each="{childFlexformData.field_sections.el}" key="ident" as="section" iteration="iterator">
+            <li class="t3js-tabmenu-item" role="presentation">
+                <a href="#tab-{ident}-body" data-bs-toggle="tab" id="tab-{ident}-heading" aria-controls="tab-{ident}-body" aria-selected="{f:if(condition:iterator.isFirst, then: ' true', else: 'false')}" class="{f:if(condition:iterator.isFirst, then: ' active')}">{section.field_section.el.field_name.vDEF}</a>
+            </li>
+        </f:for>
+    </ul>
+
+    <div class="tab-content" id="tab-{node.raw.table}-{node.raw.entity.uid}-body">
+        <f:for each="{childElements.field_sections}" key="ident" as="section" iteration="iterator">
+            <div class="tab-pane {f:if(condition:iterator.isFirst, then: ' active')}" id="tab-{ident}-body" role="tabpanel">
+                <div class="panel panel-tab">
+                    <div class="tvjs-dropzone panel-body" data-parent-pointer="{parentPointer}#field_sections#el#{ident}#field_section#el#field_content:vDEF" data-child-allowed="{fieldConfig.field_sections.el.field_section.el.field_content.TCEforms.config.allowed}">
+                        <f:for each="{section.field_section.field_content.vDEF}" as="element">
+                            <f:render partial="Backend/Handler/DoktypeDefaultHandler/Node" arguments="{node: element.node}" />
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>

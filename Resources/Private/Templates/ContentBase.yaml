@@ -1,0 +1,6 @@
+tvp-template:
+    options:
+        layoutRootPaths:
+            - 'EXT:t3voila_uikit/Resources/Private/Layouts/Content'
+        partialRootPaths:
+            - 'EXT:t3voila_uikit/Resources/Private/Partials/Content'

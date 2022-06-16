@@ -1,0 +1,44 @@
+tvp-mapping:
+    meta:
+        name: Single Column UIkit Page
+    combinedDataStructureIdentifier: 'T3Voila\Theme\UIkit\Page\DataStructure:OneColumn.tvp.xml'
+    combinedTemplateConfigurationIdentifier: 'T3Voila\Theme\UIkit\Page\Template:SingleColumn.tvp.yaml'
+    mappingToTemplate:
+        field_title:
+            dataType: row
+            dataPath: title
+            valueProcessing: stdWrap
+            valueProcessing.stdWrap: ''
+        field_author:
+            dataType: row
+            dataPath: author
+        field_layout:
+            dataType: row
+            dataPath: layout
+        field_content:
+            dataType: flexform
+            dataPath: field_content
+            valueProcessing: typoScript
+            valueProcessing.typoScript: |
+                10 = RECORDS
+                10.source.current = 1
+                10.tables = tt_content
+                10.wrap = <!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end-->
+        topmenu:
+            valueProcessing: dataProcessing
+            valueProcessing.dataProcessing: |
+                10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+                10 {
+                    levels = 2
+                    includeSpacer = 1
+                    as = _processedValue_
+                }
+        field_copyright:
+            valueProcessing: typoScript
+            valueProcessing.typoScript: |
+                10 = TEXT
+                10 {
+                    data = date : U
+                    strftime = %Y
+                    noTrimWrap = |&copy; TV+ Website | |
+                }
