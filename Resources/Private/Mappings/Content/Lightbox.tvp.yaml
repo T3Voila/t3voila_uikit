@@ -1,0 +1,23 @@
+tvp-mapping:
+    meta:
+        name: UIkit Lightbox
+    combinedDataStructureIdentifier: 'T3Voila\Theme\UIkit\Content\DataStructure:Lightbox.tvp.xml'
+    combinedTemplateConfigurationIdentifier: 'T3Voila\Theme\UIkit\Content\Template:Lightbox.tvp.yaml'
+    combinedBackendLayoutConfigurationIdentifier: 'T3Voila\Theme\UIkit\BackendLayout:Lightbox.tvp.yaml'
+    mappingToTemplate:
+        field_type:
+            dataType: flexform
+            dataPath: field_type
+        field_image:
+            dataType: flexform
+            dataPath: field_image
+            valueProcessing: dataProcessing
+            valueProcessing.dataProcessing: |
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                  as = _processedValue_
+                  references.fieldName = field_image
+                  references.table = tt_content
+                  sorting = title
+                  sorting.direction = descending
+                }

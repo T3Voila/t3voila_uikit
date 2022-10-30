@@ -1,0 +1,10 @@
+<div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: {field_type}">
+    <f:for each="{field_image}" as="image">
+        <div>
+            <a class="uk-inline" href="{image.publicUrl}" data-caption="Caption 3">
+                <f:image image="{image}" cropVariant="default" alt="{image.alternative}" maxHeight="200" loading="lazy"  />
+            </a>
+        </div>
+    </f:for>
+</div>
+
