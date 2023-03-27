@@ -3,7 +3,6 @@ tvp-mapping:
         name: UIkit Accordeon
     combinedDataStructureIdentifier: 'T3Voila\Theme\UIkit\Content\DataStructure:MultiContent.tvp.xml'
     combinedTemplateConfigurationIdentifier: 'T3Voila\Theme\UIkit\Content\Template:Accordeon.tvp.yaml'
-    #combinedBackendLayoutConfigurationIdentifier: 'T3Voila\Theme\UIkit\BackendLayoutBackup:AccordeonBackup.html'
     combinedBackendLayoutConfigurationIdentifier: 'T3Voila\Theme\UIkit\BackendLayout:Accordeon.tvp.yaml'
     mappingToTemplate:
         field_sections:
