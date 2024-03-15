@@ -11,7 +11,6 @@
                     <label>Left Column</label>
                     <config type="array">
                         <type>group</type>
-                        <internal_type>db</internal_type>
                         <allowed>tt_content</allowed>
                         <size>5</size>
                         <maxitems>200</maxitems>
@@ -25,7 +24,6 @@
                     <label>Right Column</label>
                     <config type="array">
                         <type>group</type>
-                        <internal_type>db</internal_type>
                         <allowed>tt_content</allowed>
                         <size>5</size>
                         <maxitems>200</maxitems>
