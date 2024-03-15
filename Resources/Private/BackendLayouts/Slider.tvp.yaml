@@ -1,0 +1,11 @@
+tvp-beLayout:
+    meta:
+        name: Slider BackendLayout
+        renderer: 'TVP\Renderer\Fluid'
+        design: true
+        template: 'EXT:t3voila_uikit/Resources/Private/BackendLayouts/Slider.html'
+    options:
+        layoutRootPaths:
+            - 'EXT:templavoilaplus/Resources/Private/Layouts'
+        partialRootPaths:
+            - 'EXT:templavoilaplus/Resources/Private/Partials'
