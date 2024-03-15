@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3DataStructure>
-    <meta type="array">
+    <meta>
         <title>Bullets</title>
         <description>Place a description here</description>
     </meta>
-    <ROOT type="array">
-        <el type="array">
-            <field_bullets type="array">
-                <TCEforms type="array">
-                    <label>Content</label>
-                    <config type="array">
-                        <type>text</type>
-                        <cols>80</cols>
-                        <rows>15</rows>
-                    </config>
-                </TCEforms>
+    <ROOT>
+        <el>
+            <field_bullets>
+                <label>Content</label>
+                <config>
+                    <type>text</type>
+                    <cols>80</cols>
+                    <rows>15</rows>
+                </config>
             </field_bullets>
         </el>
     </ROOT>

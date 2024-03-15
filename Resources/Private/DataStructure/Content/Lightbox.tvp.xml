@@ -1,43 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <T3DataStructure>
-    <meta type="array">
+    <meta>
         <title>Lightbox</title>
         <description>Images or Video for Lightbox</description>
     </meta>
-    <ROOT type="array">
-        <el type="array">
+    <ROOT>
+        <el>
             <field_type>
-                <TCEforms>
-                    <label>Type</label>
-                    <config>
-                        <type>select</type>
-                        <renderType>selectSingle</renderType>
-                        <items type="array">
-                            <numIndex index="0" type="array">
-                                <numIndex index="0">Slide</numIndex>
-                                <numIndex index="1">slide</numIndex>
-                            </numIndex>
-                            <numIndex index="1" type="array">
-                                <numIndex index="0">Fade</numIndex>
-                                <numIndex index="1">fade</numIndex>
-                            </numIndex>
-                            <numIndex index="3" type="array">
-                                <numIndex index="0">Scale</numIndex>
-                                <numIndex index="1">scale</numIndex>
-                            </numIndex>
-                        </items>
-                    </config>
-                </TCEforms>
+                <label>Type</label>
+                <config>
+                    <type>select</type>
+                    <renderType>selectSingle</renderType>
+                    <items>
+                        <numIndex index="0">
+                            <numIndex index="0">Slide</numIndex>
+                            <numIndex index="1">slide</numIndex>
+                        </numIndex>
+                        <numIndex index="1">
+                            <numIndex index="0">Fade</numIndex>
+                            <numIndex index="1">fade</numIndex>
+                        </numIndex>
+                        <numIndex index="3">
+                            <numIndex index="0">Scale</numIndex>
+                            <numIndex index="1">scale</numIndex>
+                        </numIndex>
+                    </items>
+                </config>
             </field_type>
             <field_image>
-                <TCEforms>
-                    <label>Images</label>
-                    <config>
-                        <type>file</type>
-                        <maxitems>10</maxitems>
-                        <allowed>common-image-types</allowed>
-                    </config>
-                </TCEforms>
+                <label>Images</label>
+                <config>
+                    <type>file</type>
+                    <maxitems>10</maxitems>
+                    <allowed>common-image-types</allowed>
+                </config>
             </field_image>
         </el>
     </ROOT>
