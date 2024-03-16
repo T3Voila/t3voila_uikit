@@ -19,12 +19,12 @@
         </f:defaultCase>
     </f:switch>
     <f:if condition="!{field_width}">
-        <f:variable name="gridType">1-1</f:variable>
+        <f:variable name="field_width">1-1</f:variable>
     </f:if>
     <div class="uk-position-relative uk-visible-toggle" uk-slider="{f:if(condition: field_parallax, then: 'parallax: true; parallax-start: 100%; parallax-end: 100%;')}{f:if(condition: field_center, then: 'center: true')}">
-        <ul class="uk-slider-items {gridType}" uk-grid>
+        <ul class="uk-slider-items {gridType} uk-child-width-{field_width}" uk-grid>
             <f:for each="{field_sections}" as="section">
-                <li class="uk-width-{field_width}">
+                <li>
                     <div class="uk-panel">
                         <f:format.raw>{section.field_section.field_content}</f:format.raw>
                     </div>
