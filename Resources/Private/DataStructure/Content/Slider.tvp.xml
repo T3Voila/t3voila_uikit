@@ -18,6 +18,18 @@
                     </items>
                 </config>
             </field_parallax>
+            <field_center>
+                <label>Center</label>
+                <config>
+                    <type>check</type>
+                    <items>
+                        <numIndex index="0">
+                            <label>Centered active slide</label>
+                            <value>1</value>
+                        </numIndex>
+                    </items>
+                </config>
+            </field_center>
             <field_sections>
                 <type>array</type>
                 <el>

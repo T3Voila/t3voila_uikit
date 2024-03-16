@@ -1,0 +1,7 @@
+imports:
+    - { resource: ../ContentBase.yaml }
+tvp-template:
+    meta:
+        name: Slider UIkit
+        renderer: 'TVP\Renderer\Fluid'
+        template: 'EXT:t3voila_uikit/Resources/Private/Templates/Content/Slider.html'

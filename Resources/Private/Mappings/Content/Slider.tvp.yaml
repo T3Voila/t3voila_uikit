@@ -8,6 +8,9 @@ tvp-mapping:
         field_parallax:
             dataType: flexform
             dataPath: field_parallax
+        field_center:
+            dataType: flexform
+            dataPath: field_center
         field_sections:
             dataType: flexform
             dataPath: field_sections
