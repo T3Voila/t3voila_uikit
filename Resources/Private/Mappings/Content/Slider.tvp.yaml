@@ -11,6 +11,12 @@ tvp-mapping:
         field_center:
             dataType: flexform
             dataPath: field_center
+        field_space:
+            dataType: flexform
+            dataPath: field_space
+        field_width:
+            dataType: flexform
+            dataPath: field_width
         field_sections:
             dataType: flexform
             dataPath: field_sections

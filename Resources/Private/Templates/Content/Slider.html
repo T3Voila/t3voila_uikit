@@ -3,10 +3,28 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
+    <f:switch expression="{field_space}">
+        <f:case value="medium">
+            <f:variable name="gridType">uk-grid-medium</f:variable>
+        </f:case>
+        <f:case value="large">
+            <f:variable name="gridType">uk-grid-large</f:variable>
+        </f:case>
+        <f:case value="none">
+            <f:variable name="gridType">uk-grid-collapse</f:variable>
+        </f:case>
+        <f:defaultCase>
+            <f:comment>small is default</f:comment>
+            <f:variable name="gridType">uk-grid-small</f:variable>
+        </f:defaultCase>
+    </f:switch>
+    <f:if condition="!{field_width}">
+        <f:variable name="gridType">1-1</f:variable>
+    </f:if>
     <div class="uk-position-relative uk-visible-toggle" uk-slider="{f:if(condition: field_parallax, then: 'parallax: true; parallax-start: 100%; parallax-end: 100%;')}{f:if(condition: field_center, then: 'center: true')}">
-        <ul class="uk-slider-items uk-grid">
+        <ul class="uk-slider-items {gridType}" uk-grid>
             <f:for each="{field_sections}" as="section">
-                <li class="uk-width-3-4">
+                <li class="uk-width-{field_width}">
                     <div class="uk-panel">
                         <f:format.raw>{section.field_section.field_content}</f:format.raw>
                     </div>
@@ -14,8 +32,8 @@
             </f:for>
         </ul>
          <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+        <a class="uk-position-center-left uk-position-small" href uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small" href uk-slidenav-next uk-slider-item="next"></a>
     </div>
 </f:section>
 
