@@ -8,6 +8,12 @@ tvp-mapping:
         field_type:
             dataType: flexform
             dataPath: field_type
+        field_space:
+            dataType: flexform
+            dataPath: field_space
+        field_width:
+            dataType: flexform
+            dataPath: field_width
         field_image:
             dataType: flexform
             dataPath: field_image
