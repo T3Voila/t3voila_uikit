@@ -4,40 +4,44 @@
         <title>Multicontent like Accordeon/Tabs</title>
         <description>Place a description here</description>
     </meta>
-    <ROOT>
-        <el>
-            <field_sections>
-                <type>array</type>
+    <sheets>
+        <sDEF>
+            <ROOT>
                 <el>
-                    <field_section>
+                    <field_sections>
                         <type>array</type>
                         <el>
-                            <field_name>
-                                <label>Section Name</label>
-                                <config>
-                                    <type>input</type>
-                                    <size>48</size>
-                                    <eval>trim</eval>
-                                </config>
-                            </field_name>
-                            <field_content>
-                                <label>Contentelements</label>
-                                <config>
-                                    <type>group</type>
-                                    <allowed>tt_content</allowed>
-                                    <size>5</size>
-                                    <maxitems>200</maxitems>
-                                    <minitems>0</minitems>
-                                    <multiple>1</multiple>
-                                </config>
-                            </field_content>
+                            <field_section>
+                                <type>array</type>
+                                <el>
+                                    <field_name>
+                                        <label>Section Name</label>
+                                        <config>
+                                            <type>input</type>
+                                            <size>48</size>
+                                            <eval>trim</eval>
+                                        </config>
+                                    </field_name>
+                                    <field_content>
+                                        <label>Contentelements</label>
+                                        <config>
+                                            <type>group</type>
+                                            <allowed>tt_content</allowed>
+                                            <size>5</size>
+                                            <maxitems>200</maxitems>
+                                            <minitems>0</minitems>
+                                            <multiple>1</multiple>
+                                        </config>
+                                    </field_content>
+                                </el>
+                                <title>One Section</title>
+                            </field_section>
                         </el>
-                        <title>One Section</title>
-                    </field_section>
+                        <section>1</section>
+                        <title>Multiple Sections</title>
+                    </field_sections>
                 </el>
-                <section>1</section>
-                <title>Multiple Sections</title>
-            </field_sections>
-        </el>
-    </ROOT>
+            </ROOT>
+        </sDEF>
+    </sheets>
 </T3DataStructure>

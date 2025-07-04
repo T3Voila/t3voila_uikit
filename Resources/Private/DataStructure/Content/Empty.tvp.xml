@@ -4,7 +4,11 @@
         <title>Empty</title>
         <description>Place a description here</description>
     </meta>
-    <ROOT>
-        <el></el>
-    </ROOT>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <el></el>
+            </ROOT>
+        </sDEF>
+    </sheets>
 </T3DataStructure>
